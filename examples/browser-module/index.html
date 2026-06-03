@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>zeos-zfilesystem browser module example</title>
+  </head>
+  <body>
+    <h1>zeos-zfilesystem browser module example</h1>
+    <pre id="out"></pre>
+
+    <script type="module">
+      import { parseZFilesystemAssetUri, listZfsDirectoryChildren } from "../../dist/zeos-zfilesystem.js";
+
+      const out = document.getElementById("out");
+      const uri = "jungle4://fs@zfilesystem:/alice/icons/logo.png";
+      const parsed = parseZFilesystemAssetUri(uri);
+      const listing = listZfsDirectoryChildren(["readme.txt", "icons/a.png", "icons/b.png"], "icons");
+      out.textContent = JSON.stringify({ parsed, listing }, null, 2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>zeos-zfilesystem global example</title>
+  </head>
+  <body>
+    <h1>zeos-zfilesystem global example</h1>
+    <pre id="out"></pre>
+
+    <script src="../../dist/zeos-zfilesystem.global.js"></script>
+    <script>
+      const out = document.getElementById("out");
+      const uri = "jungle4://fs@zfilesystem:/alice/icons/logo.png";
+      const parsed = ZEOSZFilesystem.parseZFilesystemAssetUri(uri);
+      const listing = ZEOSZFilesystem.listZfsDirectoryChildren(["readme.txt", "icons/a.png", "icons/b.png"], "icons");
+      out.textContent = JSON.stringify({ parsed, listing }, null, 2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "typescript": "latest",
+    "vite": "latest",
+    "zeos-zfilesystem": "file:../.."
+  },
+  "devDependencies": {}
+}

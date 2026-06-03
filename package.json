@@ -1,0 +1,67 @@
+{
+  "name": "zeos-zfilesystem",
+  "version": "0.1.0",
+  "description": "Protocol SDK for Zeos zfilesystem: URI scheme, encodings, on-chain read/decode, and transaction action builders.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Caterpillar Labs",
+  "homepage": "https://github.com/Caterpillar-Labs/zeos-zfilesystem#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caterpillar-Labs/zeos-zfilesystem.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Caterpillar-Labs/zeos-zfilesystem/issues"
+  },
+  "keywords": [
+    "zeos",
+    "zfilesystem",
+    "cloak",
+    "eosio",
+    "antelope",
+    "filesystem",
+    "sdk"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "browser": "./dist/zeos-zfilesystem.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./browser": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/zeos-zfilesystem.js"
+    },
+    "./global": "./dist/zeos-zfilesystem.global.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rm -rf dist coverage",
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run clean && npm run typecheck && npm run test && npm run build"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@wharfkit/antelope": "^1.0.13"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@wharfkit/antelope": "^1.0.13",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.0.0"
+  }
+}

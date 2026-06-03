@@ -1,0 +1,11 @@
+# Changelog
+
+## 0.1.0 - 2026-06-03
+
+- Initial public release
+- URI parse/build/normalize for `chain://fs@contract:/owner/path`
+- Encodings: b64, hex, b122
+- On-chain read: table `fs`, block trace decode, legacy `chunks` table
+- Virtual directory tree helpers
+- Transaction action builders: upload, rename, erase
+- `createFetchZfsChainClient` RPC helper
