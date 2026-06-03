@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1 - 2026-06-04
+
+- Republish to fix npm registry package index (0.1.0 tarball existed but root document was missing)
+
 ## 0.1.0 - 2026-06-04
 
 - Publish under npm scope `@caterpillar-labs/zeos-zfilesystem` (replaces unscoped `zeos-zfilesystem`)

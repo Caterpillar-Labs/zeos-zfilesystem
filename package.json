@@ -1,6 +1,6 @@
 {
   "name": "@caterpillar-labs/zeos-zfilesystem",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Protocol SDK for Zeos zfilesystem: URI scheme, encodings, on-chain read/decode, and transaction action builders.",
   "type": "module",
   "license": "MIT",
