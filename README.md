@@ -4,7 +4,7 @@ Protocol SDK for the Zeos **zfilesystem** contract: URI scheme, data encodings, 
 
 Published under [Caterpillar-Labs](https://github.com/Caterpillar-Labs) alongside [`zeos-link`](https://github.com/Caterpillar-Labs/zeos-link).
 
-npm: `@caterpillar-labs/zeos-zfilesystem` (replaces deprecated unscoped `zeos-zfilesystem`).
+npm: `@caterpillar-labs/zeos-zfilesystem`
 
 This package is **UI-free** and **wallet-free**. Bring your own RPC client (`ZfsChainClient`) and transaction signer.
 
