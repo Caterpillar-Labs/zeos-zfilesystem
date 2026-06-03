@@ -1,8 +1,10 @@
-# zeos-zfilesystem
+# @caterpillar-labs/zeos-zfilesystem
 
 Protocol SDK for the Zeos **zfilesystem** contract: URI scheme, data encodings, on-chain read/decode, virtual directory tree, and EOSIO action builders.
 
 Published under [Caterpillar-Labs](https://github.com/Caterpillar-Labs) alongside [`zeos-link`](https://github.com/Caterpillar-Labs/zeos-link).
+
+npm: `@caterpillar-labs/zeos-zfilesystem` (replaces deprecated unscoped `zeos-zfilesystem`).
 
 This package is **UI-free** and **wallet-free**. Bring your own RPC client (`ZfsChainClient`) and transaction signer.
 
@@ -26,7 +28,7 @@ import {
   fetchFilesZFilesystem,
   buildUploadActions,
   chunkFile,
-} from "zeos-zfilesystem";
+} from "@caterpillar-labs/zeos-zfilesystem";
 
 const parsed = parseZFilesystemAssetUri("jungle4://fs@zfilesystem:/alice/readme.txt");
 
@@ -58,7 +60,7 @@ Important:
 ## Installation
 
 ```bash
-npm install zeos-zfilesystem @wharfkit/antelope
+npm install @caterpillar-labs/zeos-zfilesystem @wharfkit/antelope
 ```
 
 ---
@@ -66,7 +68,7 @@ npm install zeos-zfilesystem @wharfkit/antelope
 ## Usage with npm / bundlers
 
 ```ts
-import { parseZFilesystemAssetUri, listZfsDirectoryChildren } from "zeos-zfilesystem";
+import { parseZFilesystemAssetUri, listZfsDirectoryChildren } from "@caterpillar-labs/zeos-zfilesystem";
 ```
 
 ---
@@ -86,13 +88,13 @@ Copy the built browser file into your public assets and import it directly:
 When installed from npm, the browser ESM build is available at:
 
 ```txt
-node_modules/zeos-zfilesystem/dist/zeos-zfilesystem.js
+node_modules/@caterpillar-labs/zeos-zfilesystem/dist/zeos-zfilesystem.js
 ```
 
 Or via the export subpath:
 
 ```ts
-import { parseZFilesystemAssetUri } from "zeos-zfilesystem/browser";
+import { parseZFilesystemAssetUri } from "@caterpillar-labs/zeos-zfilesystem/browser";
 ```
 
 ---
@@ -122,7 +124,7 @@ Examples:
 - `vaulta://fs@zfilesystem:/bob/icons/logo.png`
 
 ```typescript
-import { parseZFilesystemAssetUri, buildZFilesystemAssetUriFromContext } from "zeos-zfilesystem";
+import { parseZFilesystemAssetUri, buildZFilesystemAssetUriFromContext } from "@caterpillar-labs/zeos-zfilesystem";
 
 const parsed = parseZFilesystemAssetUri("jungle4://fs@zfilesystem:/alice/readme.txt");
 
@@ -142,7 +144,7 @@ import {
   createFetchZfsChainClient,
   fetchFilesZFilesystem,
   fetchFileContentZFilesystemWithEncoding,
-} from "zeos-zfilesystem";
+} from "@caterpillar-labs/zeos-zfilesystem";
 
 const client = createFetchZfsChainClient({ rpcUrl: "https://your-node.example" });
 
@@ -168,7 +170,7 @@ Implement `ZfsChainClient` to plug into your own RPC layer (failover, auth, etc.
 ## Upload / rename / erase (action builders)
 
 ```typescript
-import { buildUploadActions, buildRenameAction, buildEraseAction, chunkFile } from "zeos-zfilesystem";
+import { buildUploadActions, buildRenameAction, buildEraseAction, chunkFile } from "@caterpillar-labs/zeos-zfilesystem";
 
 const chunks = await chunkFile(file, 128_000);
 
@@ -205,7 +207,7 @@ const eraseAction = buildEraseAction({
 | `b122:` | Base122 (compact binary transport) |
 
 ```typescript
-import { zfsEncodeDataBytes } from "zeos-zfilesystem";
+import { zfsEncodeDataBytes } from "@caterpillar-labs/zeos-zfilesystem";
 
 const encoded = zfsEncodeDataBytes(new TextEncoder().encode("hello"), "b122");
 ```
@@ -215,7 +217,7 @@ const encoded = zfsEncodeDataBytes(new TextEncoder().encode("hello"), "b122");
 ## Virtual directory tree
 
 ```typescript
-import { listZfsDirectoryChildren } from "zeos-zfilesystem";
+import { listZfsDirectoryChildren } from "@caterpillar-labs/zeos-zfilesystem";
 
 const { directories, files } = listZfsDirectoryChildren(
   ["readme.txt", "icons/a.png", "icons/b.png"],
@@ -298,13 +300,13 @@ From outside the repo:
 mkdir /tmp/zeos-zfilesystem-smoke
 cd /tmp/zeos-zfilesystem-smoke
 npm init -y
-npm install zeos-zfilesystem @wharfkit/antelope
+npm install @caterpillar-labs/zeos-zfilesystem @wharfkit/antelope
 ```
 
 Test ESM:
 
 ```bash
-node -e "import('zeos-zfilesystem').then(m => console.log(typeof m.parseZFilesystemAssetUri))"
+node -e "import('@caterpillar-labs/zeos-zfilesystem').then(m => console.log(typeof m.parseZFilesystemAssetUri))"
 ```
 
 Expected:
@@ -316,7 +318,7 @@ function
 Test CJS:
 
 ```bash
-node -e "const m = require('zeos-zfilesystem'); console.log(typeof m.parseZFilesystemAssetUri)"
+node -e "const m = require('@caterpillar-labs/zeos-zfilesystem'); console.log(typeof m.parseZFilesystemAssetUri)"
 ```
 
 Expected:

@@ -1,5 +1,5 @@
 // packages/zfilesystem/examples/npm-vite/src/main.ts
-import { parseZFilesystemAssetUri, listZfsDirectoryChildren } from "zeos-zfilesystem";
+import { parseZFilesystemAssetUri, listZfsDirectoryChildren } from "@caterpillar-labs/zeos-zfilesystem";
 
 const app = document.getElementById("app")!;
 

@@ -1,5 +1,5 @@
 // packages/zfilesystem/examples/build-upload-actions/build-upload.mjs
-import { buildUploadActions, chunkUint8Array, zfsEncodeDataBytes } from "zeos-zfilesystem";
+import { buildUploadActions, chunkUint8Array, zfsEncodeDataBytes } from "@caterpillar-labs/zeos-zfilesystem";
 
 const text = "Hello from zeos-zfilesystem example.\n";
 const bytes = new TextEncoder().encode(text);

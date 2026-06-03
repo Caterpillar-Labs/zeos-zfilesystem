@@ -1,5 +1,5 @@
 // packages/zfilesystem/examples/node-read/list-files.mjs
-import { createFetchZfsChainClient, fetchFilesZFilesystem } from "zeos-zfilesystem";
+import { createFetchZfsChainClient, fetchFilesZFilesystem } from "@caterpillar-labs/zeos-zfilesystem";
 import { readFileSync, existsSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";

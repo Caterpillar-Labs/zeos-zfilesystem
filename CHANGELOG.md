@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.0 - 2026-06-04
+
+- Publish under npm scope `@caterpillar-labs/zeos-zfilesystem` (replaces unscoped `zeos-zfilesystem`)
+
 ## 0.1.0 - 2026-06-03
 
 - Initial public release

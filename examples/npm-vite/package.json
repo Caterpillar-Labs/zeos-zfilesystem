@@ -7,7 +7,7 @@
   "dependencies": {
     "typescript": "latest",
     "vite": "latest",
-    "zeos-zfilesystem": "file:../.."
+    "@caterpillar-labs/zeos-zfilesystem": "file:../.."
   },
   "devDependencies": {}
 }
